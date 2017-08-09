@@ -2,6 +2,34 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+var content={
+    title: 'Goutham',
+    heading:'Header',
+    content:`<p>Everything's fair in love.</p>`
+};
+
+function template(data)
+{
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.content;
+    var template=`
+    <html>
+    <head>
+    <title>${title}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link href="ui/style.css" rel="stylesheet">
+    
+    </head>
+    <div>
+    <h1>${heading}</h1>
+    <h4>${content}</h4>
+    </div>
+    <html>
+    `;
+    return template;
+}
+
 var app = express();
 app.use(morgan('combined'));
 
@@ -18,7 +46,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article1', function (req, res) {
-  res.send('Article 1 served!');
+  res.send(template(content));
 });
 
 app.get('/article_2', function (req, res) {
