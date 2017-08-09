@@ -5,7 +5,7 @@ var path = require('path');
 var content={
     title: 'Goutham',
     heading:'Header',
-    content:`<p>Everything's fair in love.but,it sucks</p>`
+    content:`<p>Everything's fair in love.but,it sucks too!!</p>`
 };
 
 function template(data)
