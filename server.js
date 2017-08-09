@@ -53,8 +53,8 @@ app.get('/article_2', function (req, res) {
   res.send('Article 2 served!');
 });
 
+var counter=0;
 app.get('/counter', function (req, res) {
-  var counter=0;
   counter= counter + 1;
   res.send(counter.toString());
 });
