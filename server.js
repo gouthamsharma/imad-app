@@ -17,6 +17,13 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+app.get('/article1', function (req, res) {
+  res.sendFile('Article 1 served!');
+});
+
+app.get('/article_2', function (req, res) {
+  res.sendFile('Article 2 served!');
+});
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
