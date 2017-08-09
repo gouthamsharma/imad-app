@@ -2,7 +2,7 @@ console.log('Loaded!');
 var button=document.getElementById("clickbtn");
 button.onclick= function()
 {
-    console.log("button clicked");
+    
   var request = new XMLHttpRequest();
   request.onreadystatechange=function()
   {
@@ -12,7 +12,6 @@ button.onclick= function()
           {
               var counter = request.responseText;
               var span = document.getElementById('counterspan');
-              console.log(counter.toString());
               span.innerHTML=counter.toString();
           }
       }
