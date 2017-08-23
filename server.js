@@ -10,7 +10,7 @@ var config={
   database: 'gouthamsharma',
   host: 'localhost',
   port:'5432',
-  password: 'process.env.DB_PASSWORD'
+  password: process.env.DB_PASSWORD
     
 };
 
