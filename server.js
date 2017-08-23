@@ -8,7 +8,7 @@ var app=express();
 var config={
   user: 'gouthamsharma',
   database: 'gouthamsharma',
-  host: 'imad.hasura-app.io',
+  host: 'localhost',
   port:'5432',
   password: process.env.DB_PASSWORD
     
