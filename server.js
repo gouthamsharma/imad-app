@@ -52,6 +52,7 @@ function template(data)
 function hash(input,salt)
 {
     var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+    console.log("hashed = "+hashed);
     return hashed;
 }
 
@@ -107,6 +108,7 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/hash/:input',function(req,res){
    var hashString = hash(req.params.input,'sample-salt-string');
+   console.log("input ="+hashString.toString('hex'));
    return hashString.toString('hex');
     
 });
