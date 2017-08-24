@@ -4,6 +4,8 @@ var Pool=require('pg').Pool;
 var express = require('express');
 var morgan = require('morgan');
 var app=express();
+var crypto = require('crypto');
+
 
 var config={
   user: 'gouthamsharma',
@@ -45,6 +47,12 @@ function template(data)
     <html>
     `;
     return template;
+}
+
+function hash(input,salt)
+{
+    var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+    return hashed;
 }
 
 var app = express();
@@ -95,6 +103,12 @@ app.get('/counter', function (req, res) {
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
+app.get('/hash/:input',function(req,res){
+   var hashString = hash(req.params.input,'sample-salt-string');
+   return hashed.toString('hex');
+    
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
