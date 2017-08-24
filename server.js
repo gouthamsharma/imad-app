@@ -107,7 +107,7 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/hash/:input',function(req,res){
    var hashString = hash(req.params.input,'sample-salt-string');
-   return hashed.toString('hex');
+   return hashString.toString('hex');
     
 });
 
