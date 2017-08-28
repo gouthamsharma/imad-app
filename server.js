@@ -5,6 +5,7 @@ var express = require('express');
 var morgan = require('morgan');
 var app=express();
 var crypto = require('crypto');
+var bodyparser=require('body-parser');
 
 
 var config={
@@ -18,7 +19,7 @@ var config={
 
 
 app.use(morgan('combined'));
-
+app.use(bodyParser.json());
 
 
 var content={
@@ -85,6 +86,24 @@ app.get('/dbtest-url', function (req, res) {
      }
       
   });
+});
+
+app.post('/newuser',function(req,res){
+   var username=req.body.username;
+   var password=req.body.password;
+   var salt=crypo.randomBytes(128).toString('hex');
+   var passwordindb=hash(password,salt);
+   pool.query('insert into hashing user (username,password) values ($1,$2)',[username,passwordindb],function(err,result){
+     if(err)
+     {
+         res.status(500).send(err.toString());
+     }
+     else
+     {
+         res.send(JSON.stringify(result));
+     }
+   });
+
 });
 
 app.get('/article1', function (req, res) {
