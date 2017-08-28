@@ -25,6 +25,5 @@ button.onclick= function()
 
 submitbutton.onclick=function()
   {
-      
-     alert(nameval.value);  
+      alert(nameval.value);  
   };
