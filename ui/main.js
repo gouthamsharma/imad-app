@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var button=document.getElementById("clickbtn");
-var nameval=document.getElementById("name");
+
 var submitbutton=document.getElementById("submitbtn");
 button.onclick= function()
 {
@@ -25,5 +25,6 @@ button.onclick= function()
 
 submitbutton.onclick=function()
   {
+      var nameval=document.getElementById("name");
     alert(nameval.val);  
   };
