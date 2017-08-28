@@ -26,5 +26,5 @@ button.onclick= function()
 submitbutton.onclick=function()
   {
       var nameval=document.getElementById("name");
-    alert(nameval.val);  
+    alert(nameval.value);  
   };
