@@ -25,5 +25,5 @@ button.onclick= function()
 
 submitbutton.onclick=function()
   {
-    alert("hai");  
+    alert(nameval.val);  
   };
