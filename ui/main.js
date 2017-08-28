@@ -1,5 +1,6 @@
 console.log('Loaded!');
 var button=document.getElementById("clickbtn");
+var nameval=document.getElementById("name");
 button.onclick= function()
 {
     
@@ -16,6 +17,11 @@ button.onclick= function()
           }
       }
   };
+  
+  function fun()
+  {
+      alert(nameval.val);
+  }
     request.open('GET','http://gouthamsharma.imad.hasura-app.io/counter',true);
     request.send(null);
     
