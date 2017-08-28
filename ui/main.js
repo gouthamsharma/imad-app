@@ -18,12 +18,12 @@ button.onclick= function()
           }
       }
   };
-  
-  submitbutton.onclick=function()
-  {
-    alert("hai");  
-  };
     request.open('GET','http://gouthamsharma.imad.hasura-app.io/counter',true);
     request.send(null);
     
 };
+
+submitbutton.onclick=function()
+  {
+    alert("hai");  
+  };
