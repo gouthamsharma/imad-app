@@ -19,7 +19,7 @@ var config={
 
 
 app.use(morgan('combined'));
-app.use(bodyParser.json());
+app.use(bodyparser.json());
 
 
 var content={
