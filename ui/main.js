@@ -41,10 +41,11 @@ submitbutton.onclick=function()
       }
   };
     request.open('POST','http://gouthamsharma.imad.hasura-app.io/newuser',true);
+    request.setRequestHeader("Content-Type", "application/json");
     var data={
           username:nameval.value,
           password:pass.value
       }; 
-    request.send(data);  
+    request.send(JSON.stringify(data));  
     
   };
