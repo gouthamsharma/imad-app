@@ -89,8 +89,10 @@ app.get('/dbtest-url', function (req, res) {
 });
 
 app.post('/newuser',function(req,res,data){
-   var username=req.body.username;
-   var password=req.body.password;
+   /*var username=req.body.username;
+   var password=req.body.password;*/
+   var username=data.username;
+   var password=data.password;
    res.send("uname is "+username);
    res.send("pwd is "+password);
    var salt=crypo.randomBytes(128).toString('hex');
