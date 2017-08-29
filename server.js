@@ -88,7 +88,7 @@ app.get('/dbtest-url', function (req, res) {
   });
 });
 
-app.post('/newuser',function(req,res){
+app.post('/newuser',function(req,res,data){
    var username=req.body.username;
    var password=req.body.password;
    res.send("uname is "+username);
