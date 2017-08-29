@@ -53,6 +53,6 @@ submitbutton.onclick=function()
           username:nameval.value,
           password:pass.value
       });
-    request.send(JSON.stringify(data1));  
+    request.send(data1);  
  
   };
