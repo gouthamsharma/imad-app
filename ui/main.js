@@ -63,7 +63,7 @@ button.onclick= function()
   submitbutton.onclick=function()
   {
       alert("inside submit button");
-      $.ajax({
+      jQuery.ajax({
 url:'/newuser',
 contentType: "application/json",
 data:'{"username":"goutham","password":"password"}',
