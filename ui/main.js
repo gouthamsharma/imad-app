@@ -46,6 +46,8 @@ submitbutton.onclick=function()
           username:nameval.value,
           password:pass.value
       }; 
+      console.log(data.username);
+      console.log(data.password);
     request.send(JSON.stringify(data));  
     
   };
