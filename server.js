@@ -88,6 +88,7 @@ app.get('/dbtest-url', function (req, res) {
 });
 
 app.post('/newuser',function(req,res){
+    console.log('inside newuser');
    var username=req.body.username;
    var password=req.body.password;
   /* var username=data.username;
