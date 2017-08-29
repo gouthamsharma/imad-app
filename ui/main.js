@@ -49,6 +49,10 @@ submitbutton.onclick=function()
       console.log(data.username);
       console.log(data.password);
       console.log(JSON.stringify(data));
-    request.send(JSON.stringify(data));  
-    
+      var data1=JSON.stringify({
+          username:nameval.value,
+          password:pass.value
+      });
+    request.send(JSON.stringify(data1));  
+ 
   };
