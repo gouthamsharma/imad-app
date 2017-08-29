@@ -26,6 +26,8 @@ button.onclick= function()
 
 submitbutton.onclick=function()
   {
+      console.log("user name from client side :"+nameval.value);
+      console.log("password from client side :"+pass.value);
       var data={
           username:nameval.value,
           password:pass.value
