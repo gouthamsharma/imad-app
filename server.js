@@ -4,7 +4,7 @@ var Pool=require('pg').Pool;
 var express = require('express');
 var morgan = require('morgan');
 var crypto = require('crypto');
-var bodyParser = require('body-parser');
+var bodyParser = require('body-arser');
 
 
 var config={
@@ -88,7 +88,6 @@ app.get('/dbtest-url', function (req, res) {
 });
 
 app.post('/newuser',function(req,res){
-    bodyParser.json();
    var username=req.body.username;
    var password=req.body.password;
   /* var username=data.username;
