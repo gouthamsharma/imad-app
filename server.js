@@ -4,7 +4,7 @@ var Pool=require('pg').Pool;
 var express = require('express');
 var morgan = require('morgan');
 var crypto = require('crypto');
-var bodyParser = require('body-arser');
+var bodyParser = require('body-parser');
 
 
 var config={
