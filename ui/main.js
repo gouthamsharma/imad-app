@@ -29,10 +29,6 @@ submitbutton.onclick=function()
       alert("inside submit button");
       console.log("user name from client side :"+nameval.value);
       console.log("password from client side :"+pass.value);
-      var data={
-          username:nameval.value,
-          password:pass.value
-      }; 
     var request = new XMLHttpRequest();
   request.onreadystatechange=function()
   {
@@ -45,6 +41,10 @@ submitbutton.onclick=function()
       }
   };
     request.open('POST','http://gouthamsharma.imad.hasura-app.io/newuser',true);
+    var data={
+          username:nameval.value,
+          password:pass.value
+      }; 
     request.send(data);  
     
   };
