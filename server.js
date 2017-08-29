@@ -97,14 +97,14 @@ app.post('/newuser',function(req,res){
    console.log("pwd from server "+password);*/
    var salt=crypto.randomBytes(128).toString('hex');
    var passwordindb=hash(password,salt);
-   pool.query('insert into hashing (username,password) values ($1,$2)',[username,passwordindb],function(err,result){
+   pool.query('insert into hashing (u_name,password) values ($1,$2)',[username,passwordindb],function(err,result){
      if(err)
      {
          res.status(500).send(err.toString());
      }
      else
      {
-         res.send(JSON.stringify(result));
+         res.send("user created successfully");
      }
    });
 
