@@ -48,6 +48,7 @@ submitbutton.onclick=function()
       }; 
       console.log(data.username);
       console.log(data.password);
+      console.log(JSON.stringify(data));
     request.send(JSON.stringify(data));  
     
   };
