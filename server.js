@@ -88,11 +88,11 @@ app.get('/dbtest-url', function (req, res) {
   });
 });
 
-app.post('/newuser',function(req,res,data){
-   /*var username=req.body.username;
-   var password=req.body.password;*/
-   var username=data.username;
-   var password=data.password;
+app.post('/newuser',function(req,res){
+   var username=req.body.username;
+   var password=req.body.password;
+  /* var username=data.username;
+   var password=data.password;*/
    console.log("username from server "+username);
    console.log("pwd from server "+password);
    var salt=crypto.randomBytes(128).toString('hex');
