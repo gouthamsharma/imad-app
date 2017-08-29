@@ -1,6 +1,7 @@
 console.log('Loaded!');
 var button=document.getElementById("clickbtn");
 var nameval=document.getElementById("name");
+var pass=document.getElementById("pwd");
 var submitbutton=document.getElementById("submitbtn");
 button.onclick= function()
 {
@@ -25,5 +26,22 @@ button.onclick= function()
 
 submitbutton.onclick=function()
   {
-      alert(nameval.value);  
+      var data={
+          username:nameval.value,
+          password:pass.value
+      }; 
+    var request = new XMLHttpRequest();
+  request.onreadystatechange=function()
+  {
+      if(request.readyState===XMLHttpRequest.DONE)
+      {
+          if(request.status===200)
+          {
+              console.log("successfully inserted");
+          }
+      }
+  };
+    request.open('POST','http://gouthamsharma.imad.hasura-app.io/newuser',true);
+    request.send(data);  
+    
   };
