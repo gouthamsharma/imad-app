@@ -93,6 +93,8 @@ app.post('/newuser',function(req,res,data){
    var password=req.body.password;*/
    var username=data.username;
    var password=data.password;
+   console.log(username);
+   console.log(password);
    var salt=crypto.randomBytes(128).toString('hex');
    var passwordindb=hash(password,salt);
    pool.query('insert into hashing (username,password) values ($1,$2)',[username,passwordindb],function(err,result){
