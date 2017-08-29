@@ -5,7 +5,7 @@ var express = require('express');
 var morgan = require('morgan');
 var app=express();
 var crypto = require('crypto');
-var bodyparser=require('body-parser');
+var bodyParser = require('body-parser');
 
 
 var config={
@@ -19,7 +19,7 @@ var config={
 
 
 app.use(morgan('combined'));
-app.use(bodyparser.json());
+app.use(bodyParser.json());
 
 
 var content={
