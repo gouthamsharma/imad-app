@@ -64,16 +64,16 @@ button.onclick= function()
   {
       alert("inside submit button");
       jQuery.ajax({
-url:'/newuser',
-contentType: "application/json",
-data:'{"username":"goutham","password":"password"}',
-type:'POST',
-success:function(data){
-  console.log('success');
-},
- error: function(err){
-                    console.log( err );
-                }
+                url:'/newuser',
+                contentType: "application/json",
+                data:'{"username":"goutham","password":"password"}',
+                type:'POST',
+                success:function(data){
+                  console.log('success');
+                },
+                error: function(err){
+                                    console.log( err );
+                                }
 });
  
   };
