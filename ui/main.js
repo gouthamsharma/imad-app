@@ -24,7 +24,7 @@ button.onclick= function()
     
 };
 
-submitbutton.onclick=function()
+/*submitbutton.onclick=function()
   {
       alert("inside submit button");
       console.log("user name from client side :"+nameval.value);
@@ -55,12 +55,12 @@ submitbutton.onclick=function()
       });
     request.send('{"username":"thanveer","password":"password"}');  
  
-  };
+  };*/
   
   
   
   
-  /*submitbutton.onclick=function()
+  submitbutton.onclick=function()
   {
       alert("inside submit button");
       jQuery.ajax({
@@ -76,5 +76,5 @@ submitbutton.onclick=function()
                                 }
 });
  
-  };*/
+  };
   
